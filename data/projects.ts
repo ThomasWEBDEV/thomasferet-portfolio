@@ -6,7 +6,7 @@ export const projects = [
     description: "Application web pour gérer et partager des recettes de cuisine. Stack : Ruby on Rails + Scraping AllRecipes.",
     stack: ["Ruby", "Rails", "Nokogiri", "Bootstrap"],
     github: "https://github.com/ThomasWEBDEV/recettes-cuisine",
-    image: "/images/recettes.jpg",
+    image: "/images/recettes.png",
   },
   {
     id: 2,
@@ -14,7 +14,7 @@ export const projects = [
     description: "Plateforme de location de jardins inspirée d’Airbnb. Projet final du Wagon, avec design complet et chatbot IA.",
     stack: ["Rails", "PostgreSQL", "Bootstrap", "OpenAI API"],
     github: "https://github.com/ThomasWEBDEV/gardenbnb",
-    image: "/images/gardenbnb.jpg",
+    image: "/images/gardenbnb.png",
   },
   {
     id: 3,
@@ -22,6 +22,6 @@ export const projects = [
     description: "Application Next.js + Supabase + OpenAI qui résume automatiquement les actualités tech.",
     stack: ["Next.js", "TypeScript", "Supabase", "OpenAI"],
     github: "https://github.com/ThomasWEBDEV/ia-news-digest",
-    image: "/images/news.jpg",
+    image: "/images/news.png",
   },
 ];
