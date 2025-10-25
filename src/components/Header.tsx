@@ -17,8 +17,8 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-neutral-950/70">
-      <div className="flex items-center justify-between py-4">
+    <header className="sticky top-0 z-50 backdrop-blur bg-neutral-950/70 border-b border-neutral-900">
+      <div className="container flex items-center justify-between py-4">
         <Link href="/" className="font-semibold tracking-tight">
           TF<span className="text-brand-400">•</span>Portfolio
         </Link>
