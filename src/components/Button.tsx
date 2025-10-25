@@ -14,10 +14,10 @@ export default function Button({ href, onClick, children, variant = "primary", c
   const styles =
     variant === "primary"
       ? "bg-brand-600 hover:bg-brand-500 text-white"
-      : "border border-neutral-800 hover:border-neutral-700 text-neutral-200";
+      : "border border-neutral-700 hover:border-neutral-600 text-neutral-100 bg-neutral-900/30";
 
-  if (href) {
-    return <Link href={href} className={`${base} ${styles} ${className}`}>{children}</Link>;
-  }
-  return <button onClick={onClick} className={`${base} ${styles} ${className}`}>{children}</button>;
+  const Comp: any = href ? Link : "button";
+  const props: any = href ? { href } : { onClick };
+
+  return <Comp {...props} className={`${base} ${styles} ${className}`}>{children}</Comp>;
 }
