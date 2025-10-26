@@ -2,6 +2,7 @@ import Image from "next/image";
 import { projects } from "@/data/projects";
 import Card from "@/components/Card";
 import Button from "@/components/Button";
+import About from "@/components/About";
 
 export default function HomePage() {
   return (
@@ -42,13 +43,18 @@ export default function HomePage() {
                   </span>
                 ))}
               </div>
-              <Button href={project.github} className="mt-4" variant="ghost">
-                Voir sur GitHub →
-              </Button>
+              <div className="mt-4 flex gap-2">
+                <Button href={project.github} variant="ghost">Voir sur GitHub →</Button>
+                {"demo" in project && project.demo ? (
+                  <Button href={project.demo}>Démo</Button>
+                ) : null}
+              </div>
             </Card>
           ))}
         </div>
       </section>
+
+      <About />
 
       <section id="contact" className="pt-2">
         <h2 className="text-2xl font-bold mb-2">Contact</h2>
