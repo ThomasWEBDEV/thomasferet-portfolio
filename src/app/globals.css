@@ -29,3 +29,8 @@ a:hover { opacity: .9; }
   background: linear-gradient(90deg, #a78bfa 0%, #60a5fa 50%, #34d399 100%);
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
+
+/* --- Resets additionnels pour fiabiliser l'affichage --- */
+a { color: inherit; text-decoration: none; }           /* ✅ plus de bleu/underline par défaut */
+h1,h2,h3,h4 { margin: 0; }
+p { margin: 0; }
