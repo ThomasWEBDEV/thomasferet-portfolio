@@ -3,23 +3,25 @@ import { projects } from "@/data/projects";
 import Card from "@/components/Card";
 import Button from "@/components/Button";
 import About from "@/components/About";
+import Hero3D from "@/components/Hero3D";
 
 export default function HomePage() {
   return (
-    <section className="space-y-10">
-      <header className="pt-6">
-        <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
-          Salut, moi c’est <span className="text-brand-400">Thomas</span>.
+    <section className="space-y-16">
+      <section className="relative overflow-hidden rounded-2xl border border-neutral-900 px-6 py-16 md:py-24 bg-neutral-950/60">
+        <Hero3D />
+        <h1 className="hero-title text-5xl md:text-7xl">
+          Salut, moi c’est <span className="text-gradient">Thomas</span>.
         </h1>
-        <p className="mt-3 text-neutral-300 max-w-2xl">
-          Développeur web full-stack, spécialisé en Ruby on Rails et Next.js.
-          J’aime concevoir des applis claires, performantes et utiles.
+        <p className="hero-sub mt-4">
+          Développeur web full-stack (Rails &amp; Next.js). J’aime les interfaces claires,
+          les perfs et un code maintenable.
         </p>
-        <div className="mt-6 flex gap-3">
+        <div className="mt-8 flex gap-3">
           <Button href="#projets">Voir les projets</Button>
           <Button href="#contact" variant="ghost">Me contacter</Button>
         </div>
-      </header>
+      </section>
 
       <section id="projets" className="pt-2">
         <h2 className="text-2xl font-bold mb-4">Projets récents</h2>
