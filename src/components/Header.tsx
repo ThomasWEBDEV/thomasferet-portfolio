@@ -17,7 +17,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 backdrop-blur bg-neutral-950/70 border-b border-neutral-900">
+    <header className="sticky top-0 z-50 backdrop-blur bg-neutral-950/80 border-b border-neutral-900">
       <div className="container flex items-center justify-between py-4">
         <Link href="/" className="font-semibold tracking-tight">
           TF<span className="text-brand-400">•</span>Portfolio
@@ -30,7 +30,7 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`text-sm hover:opacity-90 ${active ? "text-brand-400" : "text-neutral-300"}`}
+                className={`text-sm transition-colors ${active ? "text-white" : "text-neutral-300 hover:text-white"}`}
               >
                 {item.label}
               </Link>
