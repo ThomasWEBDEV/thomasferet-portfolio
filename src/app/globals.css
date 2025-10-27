@@ -46,3 +46,7 @@ p { color:#d1d5db; }
   background-clip: text;
   color: transparent;
 }
+
+/* Safeties */
+* { box-sizing: border-box; }
+html, body { margin: 0; }
