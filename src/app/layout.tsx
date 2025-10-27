@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "@/app/globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Inter } from "next/font/google";
@@ -32,11 +32,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="fr" className={inter.variable}>
       <body className="min-h-screen bg-neutral-950 text-neutral-100 antialiased">
-        <div className="container">
-          <Header />
-          <main className="py-10">{children}</main>
-          <Footer />
-        </div>
+        {/* Header pleine largeur, son contenu est centré par sa propre .container */}
+        <Header />
+
+        {/* Un SEUL container ici pour tout le contenu de page */}
+        <main className="container py-10">
+          {children}
+        </main>
+
+        {/* Footer a déjà sa propre .container en interne */}
+        <Footer />
       </body>
     </html>
   );
