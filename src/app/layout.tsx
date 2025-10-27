@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "@/app/globals.css";
+import "./globals.css";                 // ✅ import RELATIF
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Inter } from "next/font/google";
@@ -16,7 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="fr" className={inter.variable}>
       <body className="min-h-screen bg-neutral-950 text-neutral-100 antialiased">
         <Header />
-        <main className="container py-10"> {/* un seul container ici */}
+        <main className="container py-10">
           {children}
         </main>
         <Footer />
