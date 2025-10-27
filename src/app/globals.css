@@ -29,3 +29,20 @@ body {
 body { background:#0a0a0a; color:#e5e7eb; }
 h1,h2,h3 { letter-spacing:-0.02em; }
 p { color:#d1d5db; }
+
+/* --- Inspiration pass: hero typographique --- */
+.hero-title {
+  font-weight: 800;
+  line-height: .95;
+  letter-spacing: -0.035em;
+}
+.hero-sub {
+  color: #cbd5e1; /* slate-300 */
+  max-width: 60ch;
+}
+.text-gradient {
+  background: linear-gradient(90deg, #a78bfa 0%, #60a5fa 50%, #34d399 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
