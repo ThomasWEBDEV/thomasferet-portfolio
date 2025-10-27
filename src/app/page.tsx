@@ -28,7 +28,8 @@ export default function HomePage() {
         <div className="grid md:grid-cols-3 gap-6">
           {projects.map((project) => (
             <Card key={project.id}>
-              <div className="aspect-video relative rounded-lg overflow-hidden border border-neutral-800">
+              {/* ✅ wrapper avec hauteur explicite */}
+              <div className="relative w-full h-48 md:h-56 lg:h-64 rounded-lg overflow-hidden border border-neutral-800">
                 <Image
                   src={project.image}
                   alt={project.title}
