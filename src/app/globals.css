@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@tailwind components;
+@tailwind utilities;
+
 /* Base safe */
 * { box-sizing: border-box; }
 html, body { margin: 0; }
