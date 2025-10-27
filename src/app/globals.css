@@ -1,52 +1,31 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* --- Design pass 2 --- */
-body { background:#0a0a0a; color:#e5e7eb; }
-h1,h2,h3 { letter-spacing:-0.02em; }
-p { color:#d1d5db; }
-
-/* --- Inspiration pass: hero typographique --- */
-.hero-title {
-  font-weight: 800;
-  line-height: .95;
-  letter-spacing: -0.035em;
-}
-.hero-sub {
-  color: #cbd5e1; /* slate-300 */
-  max-width: 60ch;
-}
-.text-gradient {
-  background: linear-gradient(90deg, #a78bfa 0%, #60a5fa 50%, #34d399 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-/* Safeties */
+/* Base safe */
 * { box-sizing: border-box; }
 html, body { margin: 0; }
+html { overflow-x: hidden; }   /* 🔒 empêche toute marge à droite */
+body { background:#0a0a0a; color:#e5e7eb; overflow-x: hidden; }
+
+/* Comportement scroll (optionnel, évite les sauts de mise en page) */
+html { scrollbar-gutter: stable; }
+
+/* Liens & sélection */
+::selection { background: #4f46e5; color: white; }
+a { transition: opacity .2s ease; }
+a:hover { opacity: .9; }
+
+/* (On garde la personnalisation verticale uniquement, pas d’horizontale) */
+* { scrollbar-width: thin; scrollbar-color: #4f46e5 #0a0a0a; }
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #0a0a0a; }
+::-webkit-scrollbar-thumb { background: #4f46e5; border-radius: 8px; }
+
+/* Typo hero */
+.hero-title { font-weight: 800; line-height: .95; letter-spacing: -0.035em; }
+.hero-sub   { color: #cbd5e1; max-width: 60ch; }
+.text-gradient {
+  background: linear-gradient(90deg, #a78bfa 0%, #60a5fa 50%, #34d399 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
