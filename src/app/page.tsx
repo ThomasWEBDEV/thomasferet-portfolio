@@ -21,9 +21,9 @@ export default function HomePage() {
           <Button href="#projets">Voir les projets</Button>
           <Button href="#contact" variant="ghost">Me contacter</Button>
         </div>
-      </section>
+      </section></FadeIn>
 
-      <section id="projets" className="pt-2">
+      <FadeIn delay={0.2}><section id="projets" className="pt-2">
         <h2 className="text-2xl font-bold mb-4">Projets récents</h2>
         <div className="grid md:grid-cols-3 gap-6">
           {projects.map((project) => (
@@ -55,7 +55,7 @@ export default function HomePage() {
             </Card>
           ))}
         </div>
-      </section>
+      </section></FadeIn>
 
       <About />
 
@@ -64,7 +64,7 @@ export default function HomePage() {
         <p className="text-neutral-400">
           Écris-moi : <a className="underline decoration-brand-500 underline-offset-4" href="mailto:thomas@example.com">thomas@example.com</a>
         </p>
-      </section>
-    </section>
+      </section></FadeIn>
+    </section></FadeIn>
   );
 }
