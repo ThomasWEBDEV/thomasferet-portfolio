@@ -16,6 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="fr" className={inter.variable}>
       <body className="min-h-screen bg-neutral-950 text-neutral-100 antialiased">
         <Header />
+        <CursorHalo />
         <main className="container py-10">
           {children}
         </main>
