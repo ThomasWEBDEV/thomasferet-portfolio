@@ -13,7 +13,7 @@ export default function CursorHalo() {
       const { clientX, clientY } = e;
       halo.animate(
         { left: `${clientX}px`, top: `${clientY}px` },
-        { duration: 600, fill: "forwards", easing: "ease-out" }
+        { duration: 500, fill: "forwards", easing: "ease-out" }
       );
     };
 
@@ -24,7 +24,7 @@ export default function CursorHalo() {
   return (
     <div
       ref={haloRef}
-      className="pointer-events-none fixed z-[9999] h-40 w-40 -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-500/10 blur-3xl transition-opacity duration-500"
+      className="pointer-events-none fixed z-[60] h-48 w-48 -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-500/20 blur-2xl mix-blend-screen"
     />
   );
 }
