@@ -1,3 +1,4 @@
+import CursorHalo from "@/components/CursorHalo";
 import type { Metadata } from "next";
 import "./globals.css";                 // ✅ import RELATIF
 import Header from "@/components/Header";
