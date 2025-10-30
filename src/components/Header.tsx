@@ -18,12 +18,12 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 backdrop-blur bg-neutral-950/80 border-b border-neutral-900">
-      <div className="container flex items-center justify-between py-4">
-        <Link href="/" className="font-semibold tracking-tight">
+      <div className="container px-4 md:px-0 flex items-center justify-between py-3 md:py-4">
+        <Link href="/" className="font-semibold tracking-tight text-sm sm:text-base">
           TF<span className="text-brand-400">•</span>Portfolio
         </Link>
 
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden md:flex items-center gap-5 lg:gap-6">
           {nav.map((item) => {
             const active = pathname === item.href;
             return (
@@ -50,13 +50,13 @@ export default function Header() {
 
       {open && (
         <div id="mobile-nav" className="md:hidden border-t border-neutral-800 py-2">
-          <nav className="flex flex-col">
+          <nav className="container px-4 flex flex-col">
             {nav.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="px-2 py-3 text-sm text-neutral-300 hover:bg-neutral-900"
+                className="px-2 py-3 text-sm text-neutral-300 hover:bg-neutral-900 rounded-md"
               >
                 {item.label}
               </Link>
