@@ -34,7 +34,7 @@ export default function Button(props: Props) {
   if ("href" in props) {
     // Lien Next.js typé
     return (
-      <Link href={props.href} className={`${base} ${styles} ${className}`}>
+      <Link href={props.href as string} className={`${base} ${styles} ${className}`}>
         {children}
       </Link>
     );
