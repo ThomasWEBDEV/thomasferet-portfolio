@@ -2,8 +2,8 @@
 
 /* --- THEME ÉCLAIRCIS --- */
 * { box-sizing: border-box; }
-html, body { margin: 0; }
-html { overflow-x: hidden; scrollbar-gutter: stable; }
+html, body { width: 100%; max-width: 100%; background:#1b1b1f; color:#e9e9ec; overflow-x: clip; }
+html { width: 100%; max-width: 100%; overflow-x: clip; scrollbar-gutter: stable; }
 
 /* ✅ Nouveau fond gris anthracite doux */
 body {
@@ -48,19 +48,8 @@ a:hover { opacity: .85; color: #a5b4fc; }
 }
 
 /* --- BACKGROUND GRADIENT ANIMÉ --- */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  background: radial-gradient(circle at 20% 30%, rgba(79,70,229,0.25), transparent 60%),
-              radial-gradient(circle at 80% 70%, rgba(34,197,94,0.2), transparent 60%),
-              radial-gradient(circle at 50% 100%, rgba(96,165,250,0.15), transparent 60%);
-  background-size: 200% 200%;
-  animation: ambientGlow 20s ease-in-out infinite alternate;
-}
-@keyframes ambientGlow {
-  0% { background-position: 20% 30%, 80% 70%, 50% 100%; }
+
+@keyframes
   100% { background-position: 70% 60%, 40% 90%, 50% 50%; }
 }
 
