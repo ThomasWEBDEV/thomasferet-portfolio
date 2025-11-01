@@ -45,3 +45,25 @@ h1, h2, h3 { letter-spacing: -0.02em; }
   background-color: rgba(40, 40, 46, 0.85);
   border-color: rgba(100, 100, 120, 0.3);
 }
+
+/* --- Amélioration des transitions globales --- */
+* {
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.2s ease,
+    opacity 0.2s ease,
+    transform 0.25s ease;
+}
+
+/* Focus clair pour l’accessibilité */
+:focus-visible {
+  outline: 2px solid #6366f1;
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* Suppression du flash lors des hover rapides */
+a, button {
+  -webkit-tap-highlight-color: transparent;
+}
