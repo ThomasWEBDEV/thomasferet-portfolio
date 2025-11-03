@@ -80,3 +80,19 @@ a.bg-brand-600:hover {
   box-shadow: 0 0 20px rgba(99, 102, 241, 0.6);
   transform: translateY(-2px);
 }
+
+/* --- Header sticky pro --- */
+header {
+  backdrop-filter: blur(8px);
+  background-color: rgba(27, 27, 31, 0.85);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Accentue légèrement au scroll */
+@media (min-width: 640px) {
+  header:hover {
+    background-color: rgba(35, 35, 40, 0.9);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  }
+}
